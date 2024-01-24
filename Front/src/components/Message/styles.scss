@@ -1,0 +1,51 @@
+@use './../../styles/vars';
+
+.message {
+  margin-bottom: 1rem;
+
+  &--mine {
+    text-align: right;
+
+    & .message__author {
+      color: vars.$fof;
+    }
+
+    & .message__content {
+      text-align: left;
+      background-color: vars.$fof;
+      color: white;
+
+      &::before {
+        border-bottom-color: vars.$fof;
+        border-right-color: vars.$fof;
+        right: 2rem;
+        left: unset;
+        rotate: 90deg;
+      }
+    }
+  }
+
+  &__author {
+    margin: 1rem 2rem;
+  }
+
+  &__content {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    color: vars.$text-blue;
+    display: inline-block;
+    min-width: 10rem;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border: 0.5rem solid white;
+      top: -1rem;
+      left: 2rem;
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+}

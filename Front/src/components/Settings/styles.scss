@@ -1,0 +1,67 @@
+@use './../../styles/vars';
+
+.settings {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.7rem;
+  transition: all 0.8s;
+
+  &--closed {
+    translate: calc(100% - 1.5rem);
+
+    .settings__toggle {
+      rotate: 405deg;
+    }
+  }
+
+  &__toggle {
+    border: none;
+    background: white;
+    border-radius: 50%;
+    color: vars.$fof;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.8s cubic-bezier(.44,1.32,1,1.14);
+
+    &:hover {
+      // transform: scale(1.1);
+      scale: 1.2;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  &__input {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+  }
+
+  &__submit {
+    background-color: vars.$fof;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-top: 0.3rem;
+    color: white;
+
+    &:disabled {
+      background-color: #ccc;
+    }
+  }
+
+  &__error {
+    color: vars.$fof;
+    background-color: #0F0;
+    padding: 0.5rem;
+  }
+}

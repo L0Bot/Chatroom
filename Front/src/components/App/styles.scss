@@ -1,0 +1,11 @@
+@use './../../styles/vars';
+
+.app {
+  max-width: 30rem;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: vars.$light-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
